@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Hello emacs you look alright"
+echo "Thanks $1!"case 
+exit 0
