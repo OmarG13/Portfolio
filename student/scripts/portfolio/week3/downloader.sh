@@ -4,7 +4,6 @@
 # prompt the user to type a download location
 # use wget to download the webpage requested by the user
 # repeat the process until the user types “exit”.
-# Hint: Use the wget command to download a file!
 
 while true
 do
@@ -21,8 +20,12 @@ do
     " input2
     filename=$(eval echo $input2)
     wget -P $filename $input1
-    
-    echo -e "\033[32m File successfully downloaded"
-    tput sgr0
+        if (test $? -ne 0); then
+            echo -e "\033[31m Invalid input, please try again"
+            tput sgr0
+        else
+            echo -e "\033[32m File successfully downloaded"
+            tput sgr0
+        fi
 
 done

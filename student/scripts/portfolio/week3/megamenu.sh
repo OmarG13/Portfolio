@@ -1,13 +1,17 @@
 #!/bin/bash
 
+# Set the color variable
 blue='\033[34m'
 green='\033[32m'
 red='\033[31m'
 purple='\033[35m'
 cyan='\033[36m'
 
-./passwordcheck.sh
+# Start the script by running the password checker
+./megamenufiles/passwordcheck.sh
 
+# While the output from the password check is ok or "0" a loop
+# starts running displaying options for the user to select
 while [ $? -eq 0 ]
 do 
     echo
@@ -23,29 +27,32 @@ do
     tput sgr0
     echo -n ">> "
 
+# Set the choices from which the user can select to run various scripts
+# including choosing to exit, otherwise once a script finishes the selected 
+# script runs and exists, the user will return to the menu
     read choice
     case $choice in
 
         1)
-        ./foldermaker.sh
+        ./megamenufiles/foldermaker.sh
         ;;
         2)
-        ./foldercopier.sh
+        ./megamenufiles/foldercopier.sh
         ;;
         3)
-        ./setpassword.sh
+        ./megamenufiles/setpassword.sh
         ;;
         4)
-        ./calculator.sh
+        ./megamenufiles//calculator.sh
         ;;
         5)
-        ./megafoldermaker.sh
+        ./megamenufiles/megafoldermaker.sh
         ;;
         6)
-        ./filenames.sh
+        ./megamenufiles/filenames.sh
         ;;
         7)
-        ./webdownloader.sh
+        ./megamenufiles/downloader.sh
         ;;
         8)
         echo -e "$green Thank you for using menu.sh"

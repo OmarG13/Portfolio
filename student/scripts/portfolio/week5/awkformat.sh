@@ -17,6 +17,6 @@ awk 'BEGIN {
 
     END {
     print "________________________________";
-    }' ./etc/passwd
+    }' ./input.txt
     
 

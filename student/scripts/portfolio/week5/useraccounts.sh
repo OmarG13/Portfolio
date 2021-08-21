@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Using awk to read, extract and format data from the /etc/passwd file
+
+# We start off by first defining the seperator that we want awk to look for.
+# We then commence by drawing a top line for the table and then we 
+# define the colors and spacing for each header. This is then followed by more
+# lines with the same spacing as the headers to close off the header section. 
+# We then call awk to extract specific columns using defined colors and the same
+# spacing as in the headers. 
+# Finally we round off the table with a line to be at the botoom of the table.
 
 awk 'BEGIN {
     FS=":";
@@ -18,6 +27,10 @@ awk 'BEGIN {
     print "________________________________________________________________________________________________________";
         
         }' /etc/passwd
+
+# We start with a descriptive phrase for what we are doing, and then use awk to
+# search for /etc/passwd for the ":" seperator and search for "/bin/bash" then 
+# print the first column of that line
 
 echo "Users only having "/bin/bash" listed as their default shell:"
 echo
