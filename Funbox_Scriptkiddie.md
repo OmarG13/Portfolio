@@ -1,6 +1,6 @@
 <p>We start with finding the correct machine on the network to attack.</p>
 
-<p><img alt="" class="img-responsive" data-citation-link="" data-citation-text="" data-long-description="" src="https://www.openlearning.com/u/omarelgammal-r1iynb/blog/media/Funbox1.PNG?t=1638348289504" style="max-width:830px;width:100%;max-height:30px;" /></p>
+<p><img alt="" class="img-responsive" data-citation-link="" data-citation-text="" data-long-description="" src="https://media.openlearning.com/J8mfpnCz3qxYcXCUfyJBZdEDj58iCU975UtLvbnWL2WoSxM82kPf9wzDcUWEcueT.1638348285/Funbox1.PNG" style="max-width:830px;width:100%;max-height:30px;" /></p>
 
 <p>This is then followed by nmap to enumerate the ports and services running on there and start planning how to attack the machine.</p>
 
